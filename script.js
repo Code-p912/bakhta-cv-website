@@ -1,17 +1,14 @@
-// Progress bar
-window.onscroll = function() {
+window.onscroll = () => {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let scrolled = (winScroll / height) * 100;
   document.getElementById("progressBar").style.width = scrolled + "%";
 };
 
-// Animated waves
 function createWave() {
   const svgNS = "http://www.w3.org/2000/svg";
   const svg = document.createElementNS(svgNS, "svg");
-  svg.setAttribute("width", "100%");
-  svg.setAttribute("height", "100%");
+  svg.setAttribute("width", "100%"); svg.setAttribute("height", "100%");
   document.getElementById("animatedBg").appendChild(svg);
 
   const path = document.createElementNS(svgNS, "path");
@@ -33,7 +30,6 @@ function createWave() {
 }
 createWave();
 
-// Demo form
 document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
   alert("Thank you for your message! This is a demo form.");
