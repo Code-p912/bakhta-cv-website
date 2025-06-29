@@ -5,79 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bakhta Elamar | Software & Data Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
   <!-- Hero Section -->
-  <header class="hero">
-    <h1>Bakhta Elamar</h1>
-    <h2>Software & Data Engineer</h2>
-    <p class="contact-links">
-      <a href="mailto:bakhtaelamarcontact@gmail.com">bakhtaelamarcontact@gmail.com</a> |
-      <a href="https://www.linkedin.com/in/bakhtaelamar" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/belamar1" target="_blank">GitHub</a>
-    </p>
-    <p class="tagline">"Building secure, scalable applications and robust data pipelines."</p>
-  </header>
-
-  <!-- Subtle Wave Background -->
-  <svg class="hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
-    <path fill="#e0f7f4" fill-opacity="1" d="M0,96L40,101.3C80,107,160,117,240,122.7C320,128,400,128,480,112C560,96,640,64,720,48C800,32,880,32,960,58.7C1040,85,1120,139,1200,149.3C1280,160,1360,128,1400,112L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-  </svg>
-
-  <!-- Professional Summary -->
-  <section>
-    <h3>Professional Summary</h3>
-    <p>A versatile Software and Data Engineer with a passion for building secure, scalable applications and robust data pipelines. Experienced in the full software development lifecycle, from backend architecture in Python and Node.js to data modelling and visualization with PostgreSQL and Grafana. Proven ability to lead projects from concept to deployment, combining hands-on coding with a product-focused mindset.</p>
+  <section id="hero" class="section">
+    <div class="animated-bg" id="animatedBg"></div>
+    <div class="hero-content">
+      <h1>Bakhta Elamar</h1>
+      <h2>Software & Data Engineer</h2>
+      <p class="links">
+        <a href="mailto:bakhtaelamarcontact@gmail.com"><i class="fas fa-envelope"></i> bakhtaelamarcontact@gmail.com</a>
+        |
+        <a href="https://linkedin.com/in/bakhtaelamar" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/bakhtaelamar</a>
+        |
+        <a href="https://github.com/belamar1" target="_blank"><i class="fab fa-github"></i> github.com/belamar1</a>
+      </p>
+      <p class="tagline">"Building secure, scalable applications and robust data pipelines."</p>
+    </div>
   </section>
 
-  <!-- Technical Skills -->
-  <section class="skills">
-    <h3>Technical Skills</h3>
-    <ul>
-      <li>Languages: Python, SQL, JavaScript, Rust, C++</li>
-      <li>Data: PostgreSQL, Grafana, ETL, Data Warehousing, MongoDB, AWS</li>
-      <li>Backend/DevOps: Node.js, Flask, REST APIs, Docker, Git, CI/CD</li>
-      <li>Frontend: React, HTML5, CSS3</li>
-      <li>Security: AI Security, TDD, Vulnerability Analysis, Open-Source Security</li>
-    </ul>
+  <!-- Summary -->
+  <section class="section">
+    <h2>Professional Summary</h2>
+    <div class="card">
+      <p>
+        A versatile Software and Data Engineer with a passion for building secure, scalable applications and robust data pipelines. Experienced in the full software development lifecycle, from backend architecture in Python and Node.js to data modelling and visualization with PostgreSQL and Grafana. Proven ability to lead projects from concept to deployment, combining hands-on coding with a product-focused mindset.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section">
+    <h2>Technical Skills</h2>
+    <div class="skills-group">
+      <h3>Languages</h3>
+      <div class="skills">
+        <span class="skill-tag" data-category="languages" data-related="backend,data">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Rust</span>
+        <span class="skill-tag">C++</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <h3>Data</h3>
+      <div class="skills">
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Grafana</span>
+        <span class="skill-tag">ETL</span>
+        <span class="skill-tag">Data Warehousing</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">AWS</span>
+      </div>
+    </div>
+    <!-- Add Backend/DevOps, Frontend, Security similarly -->
+    <div id="skill-connections"></div>
   </section>
 
   <!-- Experience Timeline -->
-  <section class="timeline">
-    <h3>Experience</h3>
-    <div class="timeline-item">
-      <h4>Founder & Lead Developer</h4>
-      <p>Secure Things Innova (Mar 2024 - Present)</p>
+  <section class="section">
+    <h2>Experience</h2>
+    <div class="timeline" id="timeline-container">
+      <div class="timeline-line" id="timeline-line"></div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h4>Founder & Lead Developer</h4>
+        <p>Secure Things Innova (Mar 2024 - Present)</p>
+        <div class="timeline-content">
+          Leading development of secure IoT solutions and pipelines.
+        </div>
+      </div>
+      <!-- Add more timeline items -->
     </div>
-    <div class="timeline-item">
-      <h4>Data Engineering Trainee</h4>
-      <p>Generation UK (Feb 2025 - Apr 2025)</p>
+  </section>
+
+  <!-- Projects -->
+  <section class="section">
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h4>EcoTech Explorers</h4>
+        <p>STEM workshop program for kids</p>
+        <p class="tags">Python, Arduino, Circuit Design</p>
+      </div>
+      <!-- Add more projects -->
     </div>
-    <div class="timeline-item">
-      <h4>Student Trainee</h4>
-      <p>TecLancaster (Jan 2024 - Mar 2024)</p>
-    </div>
-    <div class="timeline-item">
-      <h4>Security Researcher</h4>
-      <p>Self-employed (Mar 2023 - Dec 2023)</p>
-    </div>
-    <div class="timeline-item">
-      <h4>Software Developer</h4>
-      <p>Makers (Oct 2022 - Mar 2023)</p>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <h2>Education</h2>
+    <div class="card">
+      <h4>BSc (Hons) Computer Science</h4>
+      <p>The Open University (Sep 2022 - Present)</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section>
-    <h3>Get In Touch</h3>
-    <form>
-      <input type="text" placeholder="Name" required><br>
-      <input type="email" placeholder="Email" required><br>
-      <input type="text" placeholder="Subject"><br>
-      <textarea placeholder="Message" required></textarea><br>
+  <section class="section">
+    <h2>Get In Touch</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p class="note">This is a demo contact form. In a real implementation, submissions would be processed securely.</p>
+    <p class="note">This is a demo contact form.</p>
   </section>
 
   <footer>
