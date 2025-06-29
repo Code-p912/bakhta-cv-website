@@ -31,5 +31,11 @@ function createWave() {
   }
   animate();
 }
-
 createWave();
+
+// Contact form
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Thank you for your message! This is a demo form.");
+  this.reset();
+});
