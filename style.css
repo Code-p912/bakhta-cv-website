@@ -47,5 +47,30 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 .timeline-item { margin-bottom: 1rem; }
 
 .project-card { background: #fff; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+form input:focus, form textarea:focus {
+  border-color: #00b3a7;
+  outline: none;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #00b3a7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #009688;
+}
 
 footer { text-align: center; margin: 2rem; }
